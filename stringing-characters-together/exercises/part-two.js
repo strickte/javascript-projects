@@ -43,4 +43,4 @@ console.log(`The DNA strand is ${dnaTwo.length} characters long.`)
 //5) Just for fun, apply methods to ``dna`` and use another template literal to print, 'taco cat'.
 console.log(dnaTwo.indexOf('TAC'));
 console.log(dnaTwo.indexOf('CAT'));
-console.log(`${dnaTwo.slice(4,7)}O ${dnaTwo.slice(40,43)}`)
+console.log(`${dnaTwo.slice(4,7).toLowerCase()}o ${dnaTwo.slice(dnaTwo.indexOf('CAT'),dnaTwo.indexOf('CAT')+3).toLowerCase()}`)
