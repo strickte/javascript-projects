@@ -6,10 +6,11 @@ const element2 = ['helium', 'He', 4.003];
 const element26 = ['iron', 'Fe', 55.85];
 
 //2) Define the array 'table', and use 'push' to add each of the element arrays to it. Print 'table' to see its structure.
-const table = [element1, element2, element26];
+const table = [];
+table.push(element1);
+table.push(element2);
+table.push(element26);
 console.log(table);
-//!!!I do not understand what the .push is meant to do here.
-//^^^!!!^^^   ^^^!!!^^^
 
 //3) Use bracket notation to examine the difference between printing 'table' with one index vs. two indices (table[][]).
 console.log(table[1], table[1][1]);
