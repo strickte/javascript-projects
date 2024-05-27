@@ -4,53 +4,71 @@ let protoArray3 = "space delimited string";
 let protoArray4 = "Comma-spaces, might, require, typing, caution";
 
 strings = [protoArray1, protoArray2, protoArray3, protoArray4];
-console.log(protoArray1.includes(','));
-console.log(protoArray2.includes(';'));
-console.log(protoArray3.includes(' '));
-console.log(protoArray4.includes(', '));
-console.log(strings.includes()); //Is there a way for this to ever return true?
-
 
 
 //2) 
 function reverseCommas() {
 	//TODO: 1. create and instantiate your variables.
 
-	let check;
-	let output;
+	let check = strings[0];
+
+	if (check.includes(',')) {
+		let output = check.split(',');
+		output.reverse();
+		return output.join(',');
+	}
 	//TODO: 2. write the code required for this step
 
 	//NOTE: For the code to run properly, you must return your output.  this needs to be the final line of code within the function's { }.
-	return output;
+	
 }
-
+console.log(reverseCommas());
 //3)
 function semiDash() {
-	let check;
-	let output;
+	let check = strings[1];
+	if (check.includes(';')){
+		let output = check.split(';');
+		output.sort();
+		return output.join('-');
+	}
+	
+
 //TODO: write the code required for this step
 
-  
-	return output;
+	return check;
+	
 }
+console.log(semiDash());
 
 //4)
 function reverseSpaces() {
-	let check;
-	let output;
+	let check = strings[2];
+	if (check.includes(' ')){
+		let output = check.split(' ');
+		output.sort().reverse();
+		return output.join(' ');
+	}
+	
   //TODO: write the code required for this step
 
-	return output;
+	return check;
 }
+console.log(reverseSpaces())
 
 //5)
 function commaSpace() {
-	let check;
-	let output;
+	let check = strings[3];
+	if (check.includes(', ')){
+		let output = check.split(', ');
+
+		return output.reverse().join(',');
+	}
+	
 	//TODO: write the code required for this step
   
-	return output;
+	return check;
 }
+console.log(commaSpace());
 
 // NOTE: Don't add or modify any code below this line or your program might not run as expected.
 module.exports = {
